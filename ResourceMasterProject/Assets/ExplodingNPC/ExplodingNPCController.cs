@@ -104,7 +104,22 @@ public class ExplodingNPCController : MonoBehaviour
                 {
                     Debug.Log("Player hit by explosion!");
                     Health playerHealth = c.GetComponent<Health>();
-                    playerHealth.TakeDamage(explosionDamageValue);
+                    Stamina playerStamina = c.GetComponent<Stamina>();
+                    PlayerBlock playerBlock = c.GetComponent<PlayerBlock>();
+
+                    if (playerStamina != null && playerBlock != null && playerHealth != null)
+                    {
+                        if(playerBlock.isBlocking)
+                        {
+                            playerStamina.StaminaDamage(explosionDamageValue);
+                        }
+                        else
+                        {
+                            playerHealth.TakeDamage(explosionDamageValue);
+                        }
+                    }
+                    else Debug.LogError("Some scripts are missing. Make sure Health.cs, Stamina.cs and PlayerBlock.cs are attatched to the player!");
+
                 }
                 if(c.transform.tag == "Enemy")
                 {
