@@ -82,6 +82,10 @@ public class Health : MonoBehaviourPun
                     healthCriticalRunning = true;
                 }
             }
+            else if(transform.tag == "ExplodingNPC")
+            {
+
+            }
         }
         if(transform.tag == "Player")
         {

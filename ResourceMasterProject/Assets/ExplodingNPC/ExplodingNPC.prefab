@@ -65,7 +65,6 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   deadMaterial: {fileID: 2100000, guid: 0c1163c9d0370084bba05cbe529ef8f8, type: 2}
   aware: 0
   isAttacking: 0

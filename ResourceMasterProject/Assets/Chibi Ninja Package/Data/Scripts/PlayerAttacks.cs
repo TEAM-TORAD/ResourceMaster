@@ -11,6 +11,7 @@ public class PlayerAttacks : MonoBehaviour
     public bool isLeft;
     public bool isRight;
 
+
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
